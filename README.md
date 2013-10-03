@@ -1,4 +1,6 @@
-GoF.DesignPatterns
+The Gang of Four Design Patterns
 ==================
 
-A simple demo of every pattern described in the GoF book.
+A project with simple examples of the design patterns described in the GoF Book.
+
+This is for personal learning only and you'll probably find many strange examples but I'll improve them progressively.
