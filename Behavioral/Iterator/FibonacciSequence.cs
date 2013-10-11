@@ -14,7 +14,25 @@ namespace Iterator
 
         public IEnumerator<int> GetEnumerator()
         {
-          return new FibonacciEnumerator(NumberOfValues);
+            int _previousTotal = 0;
+            int _currentTotal = 0;
+
+            for (int i = 0; i < NumberOfValues; i++)
+            {
+                if (i == 0)
+                {
+                    _currentTotal = 1;
+                }
+                else
+                {
+                    int _newTotal = _previousTotal + _currentTotal;
+                    _previousTotal = _currentTotal;
+                    _currentTotal = _newTotal;
+                }
+
+               yield return _currentTotal;
+            }
+        
         }
 
         IEnumerator IEnumerable.GetEnumerator()
